@@ -52,20 +52,20 @@ document.getElementById("submit").onclick = function(event){
   var meanCalculated = ((max-min)*weighted_percentile)+min;
   
   //not quite sure how to get std yet.....
-  var stdCalculated = ((max-min)/6)
+  //use the scale from before, 80% - 125%?
   
-  if ((stdCalculated + meanCalculated) > max){
+  if ((1.25*(meanCalculated)) > max){
     document.getElementById('max').innerText = max;
   }
   else{
-    document.getElementById('max').innerText = Math.trunc(stdCalculated + meanCalculated);
+    document.getElementById('max').innerText = Math.trunc(1.25*meanCalculated);
   }
   
-  if ((meanCalculated - stdCalculated) < min){
+  if ((0.8*meanCalculated) < min){
     document.getElementById('min').innerText = min;
   }
   else{
-    document.getElementById('min').innerText = Math.trunc(meanCalculated - stdCalculated);
+    document.getElementById('min').innerText = Math.trunc(0.8*meanCalculated);
   }
   // document.getElementById('min').innerText = Math.floor(distance / (day))
   // document.getElementById('max').innerText = Math.floor((distance % (day)) / (hour))
