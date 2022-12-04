@@ -12,23 +12,33 @@
   </div>
   <div id="output"></div>
 
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+ 
 
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyDBXMo2jJvDoj_W507E-Q6Z1WjaGHon-X0",
-    authDomain: "calypso-9cf1a.firebaseapp.com",
-    projectId: "calypso-9cf1a",
-    storageBucket: "calypso-9cf1a.appspot.com",
-    messagingSenderId: "769748777764",
-    appId: "1:769748777764:web:3d30dcbb4c155120ec11b1"
-  };
+function isPrime (number){
+ var notPrime = false
+ if (number == "" || isNaN(number)){
+   $("#output").html("please input number");
+ }
+   else{
+   for (var j = 2; j < number; j++){
+     if (number % j == 0){
+        notPrime = true
+      }
+    }
+   if (notPrime){
+     $("#output").html("not prime");
+   }
+   else{
+     $("#output").html("prime");
+   }
+   }
+}
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-</script>
+// $(document).ready(function(){
+//   $("#button").click(function() {
+//    isPrime(document.getElementById('input').value)
+//     })});
+  
+                              
+                              
 </body>
