@@ -1,44 +1,6 @@
-<body>
-<link rel="stylesheet" type="text/css" href="main.css">
-    <div id = "title-text">
-    <h>Is it prime?</h>
-    </div>
-   
-    
-    
-    <div id="search">
-    <input id="input" type="text" value=""></input> <br>
-  <button id="button">Go!</button>
-  </div>
-  <div id="output"></div>
-
- 
-
-function isPrime (number){
- var notPrime = false
- if (number == "" || isNaN(number)){
-   $("#output").html("please input number");
- }
-   else{
-   for (var j = 2; j < number; j++){
-     if (number % j == 0){
-        notPrime = true
-      }
-    }
-   if (notPrime){
-     $("#output").html("not prime");
-   }
-   else{
-     $("#output").html("prime");
-   }
-   }
-}
-
-// $(document).ready(function(){
-//   $("#button").click(function() {
-//    isPrime(document.getElementById('input').value)
-//     })});
-  
-                              
-                              
-</body>
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="JVqzpY" data-user="adotdong" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/adotdong/pen/JVqzpY">
+  AP World Countdown</a> by ADotDong (<a href="https://codepen.io/adotdong">@adotdong</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
