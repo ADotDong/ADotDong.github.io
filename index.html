@@ -1,3 +1,4 @@
+<body>
 <link rel="stylesheet" type="text/css" href="main.css">
     <div id = "title-text">
     <h>Is it prime?</h>
@@ -10,3 +11,24 @@
   <button id="button">Go!</button>
   </div>
   <div id="output"></div>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyDBXMo2jJvDoj_W507E-Q6Z1WjaGHon-X0",
+    authDomain: "calypso-9cf1a.firebaseapp.com",
+    projectId: "calypso-9cf1a",
+    storageBucket: "calypso-9cf1a.appspot.com",
+    messagingSenderId: "769748777764",
+    appId: "1:769748777764:web:3d30dcbb4c155120ec11b1"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+</script>
+</body>
